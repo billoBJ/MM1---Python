@@ -1,10 +1,7 @@
-import time
 import random 
 import math
-import threading
 import numpy as np
 import queue
-import copy
 
 
 qu = queue.Queue() #cola de servicio
@@ -83,8 +80,8 @@ def Simular(num_clientes): #simulamos MM1
        #Retraso de en cola 
        ret =  wait_time / clientes_atendidos #tiempo espera / n clientes
        print ("\nRETRASO EN COLA: %.2f" % ret)
-       ret =  server_busy / t #tiempo serv ocupado / tiempo fin
-       print ("\nUTILIZACION DEL SERVIDOR: %.2f" % ret)
+       utilizacion =  server_busy / t #tiempo serv ocupado / tiempo fin
+       print ("\nUTILIZACION DEL SERVIDOR: %.2f" % utilizacion)
        
 
 
